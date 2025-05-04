@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer & Job Matcher</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📄</span>
+                    <span>ResuMatch</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#" class="btn btn-outline">Login</a>
+                    <a href="#" class="btn btn-primary">Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Optimize Your Resume, Find Your Perfect Job</h1>
+                <p class="subtitle">AI-powered resume analysis and job matching to maximize your chances of landing your dream job.</p>
+                <div class="btn-group">
+                    <a href="#upload-section" class="btn btn-primary">Analyze My Resume</a>
+                    <a href="#how-it-works" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="/api/placeholder/600/400" alt="Resume Analysis Dashboard">
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose ResuMatch?</h2>
+                <p>Our advanced AI helps you stand out in the competitive job market</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>AI Resume Analysis</h3>
+                    <p>Get detailed insights on your resume's strengths and weaknesses with our AI-powered analysis.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Job Matching</h3>
+                    <p>Find jobs that match your skills and experience with our intelligent matching algorithm.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Resume Optimization</h3>
+                    <p>Get personalized recommendations to improve your resume and increase your chances of getting hired.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Skills Gap Analysis</h3>
+                    <p>Identify skills you need to develop to qualify for your target positions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>ATS Compatibility Check</h3>
+                    <p>Ensure your resume passes through Applicant Tracking Systems with our compatibility checker.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Job Alerts</h3>
+                    <p>Receive notifications when new jobs matching your profile are posted.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Three simple steps to optimize your job search</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Upload Your Resume</h3>
+                        <p>Upload your resume in PDF, DOCX, or TXT format. Our system will analyze the content, structure, and formatting.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Get Detailed Analysis</h3>
+                        <p>Receive a comprehensive analysis of your resume, including ATS compatibility, keyword optimization, and content strength.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Match With Jobs</h3>
+                        <p>Get matched with relevant job opportunities based on your skills, experience, and career goals. Apply with confidence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="upload-section" id="upload-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Analyze Your Resume</h2>
+                <p>Upload your resume and get instant feedback</p>
+            </div>
+            <div class="upload-container">
+                <div class="file-upload" id="drop-area">
+                    <div class="upload-icon">📄</div>
+                    <h3>Drag & Drop Your Resume</h3>
+                    <p>or click to browse files (PDF, DOCX, TXT)</p>
+                    <input type="file" id="resume-upload" style="display: none;">
+                </div>
+                <div class="form-group">
+                    <label for="job-title">Desired Job Title</label>
+                    <input type="text" id="job-title" placeholder="e.g. Software Engineer, Marketing Manager">
+                </div>
+                <div class="form-group">
+                    <label for="job-location">Preferred Location</label>
+                    <input type="text" id="job-location" placeholder="e.g. New York, Remote">
+                </div>
+                <div class="form-group">
+                    <label for="resume-upload" class="file-upload" id="drop-area">
+                        <div class="upload-icon">📄</div>
+                        <h3>Drag & Drop Your Resume</h3>
+                        <p>or click to browse files (PDF, DOCX, TXT)</p>
+                        <input type="file" id="resume-upload" accept=".pdf,.doc,.docx,.txt" style="display: none;">
+                    </label>                    
+                    <select id="experience-level">
+                        <option value="">Select Experience Level</option>
+                        <option value="entry">Entry Level (0-2 years)</option>
+                        <option value="mid">Mid Level (3-5 years)</option>
+                        <option value="senior">Senior Level (6+ years)</option>
+                        <option value="manager">Management</option>
+                        <option value="executive">Executive</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" style="width: 100%;" id="analyze-btn">Analyze Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section" id="results-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Resume Analysis</h2>
+                <p>Here's what we found in your resume</p>
+            </div>
+            <div class="results-container" id="results-container">
+                <div class="results-tabs">
+                    <div class="tab active" data-tab="resume-analysis">Resume Analysis</div>
+                    <div class="tab" data-tab="job-matches">Job Matches</div>
+                </div>
+                <div class="tab-content" id="resume-analysis">
+                    <div class="resume-score">
+                        <div class="score-circle">78</div>
+                        <h3>Resume Score</h3>
+                        <p>Your resume is strong but could use some improvements</p>
+                    </div>
+                    <div class="analysis-details">
+                        <h3>Strengths</h3>
+                        <ul>
+                            <li>Strong professional experience section with quantifiable achievements</li>
+                            <li>Good balance of technical and soft skills</li>
+                            <li>Clear and consistent formatting</li>
+                        </ul>
+                        <div class="improvements">
+                            <h3>Suggested Improvements</h3>
+                            <div class="improvement-item">
+                                <h4>Add more keywords relevant to your target role</h4>
+                                <p>Including industry-specific keywords will help your resume pass through ATS systems.</p>
+                            </div>
+                            <div class="improvement-item">
+                                <h4>Enhance your professional summary</h4>
+                                <p>Make your summary more impactful by highlighting your unique selling points.</p>
+                            </div>
+                            <div class="improvement-item">
+                                <h4>Add more quantifiable achievements</h4>
+                                <p>Include metrics and numbers to demonstrate the impact of your work.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="job-matches" style="display: none;">
+                    <h3>Top Job Matches</h3>
+                    <p>Based on your resume, here are jobs that match your skills and experience:</p>
+                    <div class="job-matches">
+                        <div class="job-card">
+                            <div class="match-score">92% Match</div>
+                            <h4 class="job-title">Senior Software Engineer</h4>
+                            <p class="job-company">TechCorp Inc.</p>
+                            <p class="job-location">📍 San Francisco, CA (Remote Option)</p>
+                            <p>Full-time position requiring 5+ years of experience with Java, Spring Boot, and AWS.</p>
+                            <div class="skills-match">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Spring Boot</span>
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">Microservices</span>
+                            </div>
+                            <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Apply Now</a>
+                        </div>
+                        <div class="job-card">
+                            <div class="match-score">85% Match</div>
+                            <h4 class="job-title">Backend Developer</h4>
+                            <p class="job-company">InnovateTech</p>
+                            <p class="job-location">📍 Remote</p>
+                            <p>Contract position for a backend developer with strong Java/Kotlin skills and database experience.</p>
+                            <div class="skills-match">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Kotlin</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">REST APIs</span>
+                            </div>
+                          </div> <!-- job-card -->
+                        </div> <!-- job-matches -->
+                    </div> <!-- tab-content -->
+                </div> <!-- results-container -->
+            </div> <!-- container -->
+        </section>
+    </body>
+    </html>
+    
